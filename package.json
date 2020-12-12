@@ -4,9 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "Webpack serve",
-    "build": "webpack"
+    "start": "webpack serve --mode development",
+    "build": "cross-env NODE_ENV=production webpack --mode production"
   },
   "keywords": [],
   "author": "",
@@ -26,5 +25,8 @@
     "webpack": "^5.10.1",
     "webpack-cli": "^4.2.0",
     "webpack-dev-server": "^3.11.0"
+  },
+  "dependencies": {
+    "cross-env": "^7.0.3"
   }
 }

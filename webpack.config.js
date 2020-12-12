@@ -29,16 +29,16 @@ module.exports = {
       },
       {
         test: /\.css$/i,
-        use: ['style-loader', 'css-loader'],
+        use: ['style-loader', 'css-loader', 'postcss-loader'],
       },
     ],
   },
 
   devServer: {
+    watchContentBase: true,
     contentBase: resolve(__dirname, 'dist'),
-    publicPath: '/assets/',
-    open: true,
     compress: true,
     port: 9000,
+    open: true,
   },
 };
